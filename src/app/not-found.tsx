@@ -21,7 +21,7 @@ Fatal error: Attempted to access memory at invalid address 0x404`}
             KERNEL PANIC: Page Not Found
           </h1>
           <p className="text-gray mb-2 text-sm sm:text-base">
-            Process 'webpage' has encountered an unrecoverable error
+            Process &apos;webpage&apos; has encountered an unrecoverable error
           </p>
           <p className="text-gray text-xs sm:text-sm">
             Error code: HTTP_404_NOT_FOUND
@@ -33,7 +33,7 @@ Fatal error: Attempted to access memory at invalid address 0x404`}
             $ cat /var/log/error.log
           </p>
           <p className="text-gray text-xs sm:text-sm whitespace-nowrap">
-            [ERROR] Resource '/requested/path' not found in filesystem
+            [ERROR] Resource &apos;/requested/path&apos; not found in filesystem
             <br />
             [WARNING] User navigation led to unmapped memory region
             <br />
