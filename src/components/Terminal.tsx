@@ -79,9 +79,8 @@ const Terminal = () => {
   };
 
   return (
-    <div className="min-h-[100%] bg-black text-green-400 p-4">
+    <div className="min-h-[100%] bg-black text-green p-4">
       {" "}
-      {/* Use specific Tailwind colors */}
       <div
         ref={terminalRef}
         className="max-w-4xl h-[calc(100vh-120px)] overflow-y-auto mx-auto"
@@ -99,7 +98,7 @@ const Terminal = () => {
                 {/* Adjusted max-width */}
                 {renderImage(line.imageSrc, line.content)}
                 {line.content && (
-                  <p className="text-center text-gray-400 text-sm mt-1">
+                  <p className="text-center text-gray text-sm mt-1">
                     {line.content}
                   </p>
                 )}{" "}

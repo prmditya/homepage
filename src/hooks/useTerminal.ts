@@ -53,7 +53,7 @@ export const useTerminal = () => {
           id: (nextId.current++).toString(),
           type,
           content: payload.content,
-          imageSrc: payload.imageSrc, // Changed from imgSrc to imageSrc
+          imageSrc: payload.imageSrc,
           timestamp: new Date(),
         };
       }
@@ -78,7 +78,7 @@ export const useTerminal = () => {
           addLine("output", "  clear      - Clear terminal");
           addLine("output", "  whoami     - Display current user");
           addLine("output", "  date       - Show current date");
-          addLine("output", "  showlogo   - Display the main logo"); // Added new command
+          addLine("output", "  showlogo   - Display the main logo");
           break;
 
         case "about":
