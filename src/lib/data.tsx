@@ -27,7 +27,7 @@ export const projects: Project[] = [
       "Terraform",
       "aws",
     ],
-    repo: "https://github.com/prmditya/dotfiles",
+    repo: "https://github.com/prmditya/smart-lele",
     imageSrc: smartLeleImg,
   },
   {
