@@ -1,10 +1,10 @@
 "use client";
 
 import { useState, useCallback, useRef } from "react";
-import { TerminalLine, Project } from "@/types"; // Import Project type
+import { TerminalLine, Project } from "@/types";
 import { projects, skills, about } from "@/lib/data";
-import Logo from "../app/assets/logo-white.png"; // Assuming Logo is StaticImageData
-import { StaticImageData } from "next/image"; // Make sure StaticImageData is imported
+import Logo from "@/app/assets/logo-white.png";
+import { StaticImageData } from "next/image";
 
 export const useTerminal = () => {
   const nextId = useRef(0);
@@ -36,7 +36,7 @@ export const useTerminal = () => {
       // Allow imageSrc to be StaticImageData in the payload
       payload:
         | string
-        | { content?: string; imageSrc?: string | StaticImageData },
+        | { content?: string; imageSrc?: string | StaticImageData }
     ) => {
       let newLine: TerminalLine;
 
@@ -57,9 +57,9 @@ export const useTerminal = () => {
           timestamp: new Date(),
         };
       }
-      setLines((prev) => [...prev, newLine]);
+      setLines((prev: any) => [...prev, newLine]);
     },
-    [],
+    []
   );
 
   const executeCommand = useCallback(
@@ -94,7 +94,11 @@ export const useTerminal = () => {
 [${project.name}] - ${project.description}
 
     Tech: ${project.tech.join(", ")}
-    ${project.repo ? `<a href="${project.repo}" target="_blank" rel="noopener noreferrer">Repo: ${project.repo}</a>` : ""}`,
+    ${
+      project.repo
+        ? `<a href="${project.repo}" target="_blank" rel="noopener noreferrer">Repo: ${project.repo}</a>`
+        : ""
+    }`,
               imageSrc: project.imageSrc,
             });
             addLine("output", " ");
@@ -110,15 +114,15 @@ export const useTerminal = () => {
           addLine("output", "Contact information:");
           addLine(
             "output",
-            `  Email: <a href="mailto:tparamaditya@gmail.com" target"_blank" rel="noopener noreferrer">tparamaditya@gmail.com</a>`,
+            `  Email: <a href="mailto:tparamaditya@gmail.com" target"_blank" rel="noopener noreferrer">tparamaditya@gmail.com</a>`
           );
           addLine(
             "output",
-            `  GitHub: <a href="https://github.com/prmditya" target"_blank" rel="noopener noreferrer">https://github.com/prmditya</a>`,
+            `  GitHub: <a href="https://github.com/prmditya" target"_blank" rel="noopener noreferrer">https://github.com/prmditya</a>`
           );
           addLine(
             "output",
-            `  LinkedIn: <a href="https://www.linkedin.com/in/prmdtya/" target"_blank" rel="noopener noreferrer">https://www.linkedin.com/in/prmdtya/</a>`,
+            `  LinkedIn: <a href="https://www.linkedin.com/in/prmdtya/" target"_blank" rel="noopener noreferrer">https://www.linkedin.com/in/prmdtya/</a>`
           );
           break;
 
@@ -146,7 +150,7 @@ export const useTerminal = () => {
           };
           const formattedDate = new Intl.DateTimeFormat(
             "en-US",
-            options,
+            options
           ).format(now);
           addLine("output", formattedDate);
           break;
@@ -175,7 +179,7 @@ export const useTerminal = () => {
           addLine("output", 'Type "help" for available commands');
       }
     },
-    [addLine],
+    [addLine]
   );
 
   return { lines, executeCommand };

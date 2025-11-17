@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --color-black: #282828;
+  --color-black: #000;
   --color-fg: #fbf1c7;
   --color-green: #b8bb26;
   --color-green-alpha: rgba(184, 187, 38, 0.3);
@@ -68,4 +68,24 @@ input:focus {
 .terminal-text {
   font-size: 14px;
   line-height: 1.5;
+}
+
+.custom-gradient {
+  background: linear-gradient(
+    #fbf6c0,
+    #fbf6c0 3px,
+    transparent 0,
+    transparent 3px
+  );
+  background-size: 100% 7px;
+  animation: pan-overlay 0.3s linear infinite;
+}
+
+@keyframes pan-overlay {
+  0% {
+    background-position: 0 7px;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }

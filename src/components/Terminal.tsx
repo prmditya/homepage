@@ -59,7 +59,7 @@ const Terminal = () => {
 
   const renderImage = (
     imageSrc: string | StaticImageData,
-    altText?: string,
+    altText?: string
   ) => {
     if (!imageSrc) return null;
 
@@ -79,7 +79,7 @@ const Terminal = () => {
   };
 
   return (
-    <div className="min-h-[100%] bg-black text-green p-4">
+    <div className="min-h-full bg-black text-green p-4">
       {" "}
       <div
         ref={terminalRef}
