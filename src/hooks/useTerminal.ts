@@ -3,8 +3,9 @@
 import { useState, useCallback, useRef } from "react";
 import { TerminalLine, Project } from "@/types";
 import { projects, skills, about } from "@/lib/data";
-import Logo from "@/app/assets/logo-white.png";
 import { StaticImageData } from "next/image";
+
+const Logo = "/assets/logo-white.png";
 
 export const useTerminal = () => {
   const nextId = useRef(0);

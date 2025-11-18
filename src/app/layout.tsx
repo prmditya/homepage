@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${jetbrainsMono.className} bg-black`}>
-        <div className="custom-gradient pointer-events-none fixed left-0 top-0 w-full z-30 h-screen animate-pan-overlay opacity-2" />
+        <div className="custom-gradient pointer-events-none fixed left-0 top-0 w-full z-30 h-screen animate-pan-overlay opacity-4" />
         <Header />
         <main className="min-h-full hp-5">{children}</main>
         <Footer />

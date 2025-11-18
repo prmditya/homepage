@@ -1,7 +1,8 @@
 import { Project } from "@/types";
-import freewriteImg from "../app/assets/freewrite-screenshot.png";
-import smartLeleImg from "../app/assets/smartLele-screenshot.png";
-import phishGuardImg from "../app/assets/phishguard-screenshot.png";
+
+const freewriteImg = "/assets/freewrite-tui-screenshot.png";
+const smartLeleImg = "/assets/smartLele-screenshot.png";
+const phishGuardImg = "/assets/phishguard-screenshot.png";
 
 export const projects: Project[] = [
   {
