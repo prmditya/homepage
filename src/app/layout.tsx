@@ -9,6 +9,9 @@ const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "prmditya@homepage:~$",
   description: "A terminal-style homepage following suckless philosophy",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
