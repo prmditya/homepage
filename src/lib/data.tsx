@@ -1,6 +1,6 @@
 import { Project } from "@/types";
 
-const freewriteImg = "/assets/freewrite-tui-screenshot.png";
+const freewriteImg = "/assets/freewrite-screenshot.png";
 const smartLeleImg = "/assets/smartLele-screenshot.png";
 const phishGuardImg = "/assets/phishguard-screenshot.png";
 
